@@ -10,7 +10,8 @@ export enum PACKAGE_PRICE {
 }
 
 export interface Package {
+    id:string,
     name:string,
-    period:string,
-    price:string
+    period:PACKAGE_PERIOD,
+    price:PACKAGE_PRICE
 }

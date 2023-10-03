@@ -48,6 +48,9 @@
     <button mat-mini-fab color="primary" (click)="openAddPackageModal()" matTooltip="Ajouter un package">
       <mat-icon>post_add</mat-icon>
     </button>
+    <button mat-mini-fab color="primary" (click)="openAddSoubscriptionModal()" matTooltip="Souscrire un utilisateur a un package">
+      <mat-icon>contact_page</mat-icon>
+  </button>
   </div>
 
   <div class="card-container">
@@ -55,6 +58,7 @@
     <mat-tab-group>
       <mat-tab label="Comptes utilisateurs"> <app-user-account-list></app-user-account-list> </mat-tab>
       <mat-tab label="Abonnements"> <app-package-list></app-package-list> </mat-tab>
+      <mat-tab label="Souscription utilisateur"> <app-list-package-user-subscription></app-list-package-user-subscription> </mat-tab>
     </mat-tab-group>
 
     

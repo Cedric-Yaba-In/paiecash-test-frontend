@@ -26,6 +26,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AddPackageComponent } from './components/add-package/add-package.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { ListPackageUserSubscriptionComponent } from './components/list-package-user-subscription/list-package-user-subscription.component';
+import { SubscribeToPackageComponent } from './components/subscribe-to-package/subscribe-to-package.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     UserAccountListComponent,
     PackageListComponent,
     AddUserAccountComponent,
-    AddPackageComponent
+    AddPackageComponent,
+    ListPackageUserSubscriptionComponent,
+    SubscribeToPackageComponent
   ],
   imports: [
     BrowserModule,

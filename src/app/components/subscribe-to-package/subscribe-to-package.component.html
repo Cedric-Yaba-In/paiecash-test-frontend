@@ -1,0 +1,26 @@
+<form [formGroup]="formGroup" (ngSubmit)="submitAddControl()">
+    <h2 mat-dialog-title>Ajouter un package</h2>
+    <mat-dialog-content class="mat-typography">
+        
+            <mat-form-field class="form-field">
+                <mat-label>Utilisateur</mat-label>
+                <mat-select formControlName="userId">
+                    <mat-option *ngFor="let value of users" [value]="value.id">{{value.fullName}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        
+            <mat-form-field class="form-field">
+                <mat-label>Package</mat-label>
+                <mat-select formControlName="packageId">
+                    <mat-option *ngFor="let value of packages" [value]="value.id">{{value.name}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Annuler</button>
+    <button type="submit" mat-button extended  color="primary" [disabled]="formGroup.invalid" cdkFocusInitial>
+        <mat-spinner diameter="20" *ngIf="waitForAPI==true"></mat-spinner>
+        <span *ngIf="waitForAPI==false">Ajouter</span></button>
+    </mat-dialog-actions>
+</form>

@@ -10,7 +10,6 @@ import { UsersService } from 'src/app/services/users/users.service';
 export class UserAccountListComponent implements OnInit {
   dataSource:User[]=[]
   displayedColumns:string[]=["name","email"]
-  panelOpenState = false;
   constructor(private userService:UsersService){}
   
   ngOnInit()
