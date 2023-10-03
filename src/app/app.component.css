@@ -1,0 +1,27 @@
+
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+
+  .author-name
+  {
+    margin-right: 20px;
+  }
+
+  
+  .button-action {
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+
+  .button-action button
+  {
+    margin-right:20px
+  }
