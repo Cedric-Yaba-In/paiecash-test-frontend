@@ -16,13 +16,26 @@ import { UserAccountListComponent } from './components/user-account-list/user-ac
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import { PackageListComponent } from './components/package-list/package-list.component';
+import { AddUserAccountComponent } from './components/add-user-account/add-user-account.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { AddPackageComponent } from './components/add-package/add-package.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UserAccountComponent,
     UserAccountListComponent,
-    PackageListComponent
+    PackageListComponent,
+    AddUserAccountComponent,
+    AddPackageComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +48,14 @@ import { PackageListComponent } from './components/package-list/package-list.com
     MatTabsModule,
     MatTooltipModule,
     MatSnackBarModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatProgressSpinnerModule,
+    MatSelectModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

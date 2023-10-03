@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { AddUserAccountComponent } from "./components/add-user-account/add-user-account.component"
+import { AddPackageComponent } from "./components/add-package/add-package.component"
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+  constructor(public dialog: MatDialog) {}
+
+
+  openAddUserModal()
+  {
+    this.dialog.open(AddUserAccountComponent);
+  }
+
+  openAddPackageModal()
+  {
+    this.dialog.open(AddPackageComponent);
+  }
 }

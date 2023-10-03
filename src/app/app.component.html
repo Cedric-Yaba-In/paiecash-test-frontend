@@ -41,11 +41,11 @@
   <div class="card-container button-action">
     
     <!-- Button action-->
-    <button mat-mini-fab color="primary"  matTooltip="Ajouter un compte">
+    <button mat-mini-fab color="primary" (click)="openAddUserModal()"  matTooltip="Ajouter un compte">
       <mat-icon>person_add</mat-icon>
     </button>
 
-    <button mat-mini-fab color="primary" matTooltip="Ajouter un package">
+    <button mat-mini-fab color="primary" (click)="openAddPackageModal()" matTooltip="Ajouter un package">
       <mat-icon>post_add</mat-icon>
     </button>
   </div>

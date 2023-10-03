@@ -27,17 +27,31 @@ export class PackagesService {
     }))
   }
   
-  addPackageData(Package:Package)
+  addPackageData(pkg:Package)
   {
-    this.PackageData.push(Package);
+    this.PackageData.push(pkg);
     this.PackageData$.next(this.PackageData);
 
   }
 
-  addPackagesData(Packages:Package[])
+  addNewPackage(pkg:Package)
   {
-    console.log("Packages ",Packages)
-    this.PackageData=[...this.PackageData,...Packages];
+    return new Promise<any>((resolve,reject)=>{
+      this.httpClient.post<ResponseAPI<Package[]>>(`${environment.apiUrl}/package/create`,pkg,{
+          "headers":{
+            "content-type":"application/json"
+          }
+      })
+      .subscribe((data)=>{
+        this.addPackageData(pkg);
+        resolve(true)
+      },(error)=> reject(error.message))
+    })
+  }
+
+  addPackagesData(pkg:Package[])
+  {
+    this.PackageData=[...this.PackageData,...pkg];
     this.PackageData$.next(this.PackageData);
   }
 }

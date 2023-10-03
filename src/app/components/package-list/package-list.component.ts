@@ -14,7 +14,7 @@ export class PackageListComponent {
   
   ngOnInit()
   {
-    this.PackageService.PackageData$.subscribe((data)=>this.dataSource=data)
+    this.PackageService.PackageData$.subscribe((data)=>this.dataSource=[...data])
   }
 
 }

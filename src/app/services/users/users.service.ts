@@ -31,7 +31,22 @@ export class UsersService {
   {
     this.userData.push(user);
     this.userData$.next(this.userData);
+  }
 
+  addNewUser(user:User)
+  {
+    return new Promise<any>((resolve,reject)=>{
+      this.httpClient.post<ResponseAPI<User[]>>(`${environment.apiUrl}/auth/register`,user,{
+          "headers":{
+            "content-type":"application/json"
+          }
+
+      })
+      .subscribe((data)=>{
+        this.addUserData(user);
+        resolve(true)
+      },(error)=> reject(error.message))
+    })
   }
 
   addUsersData(users:User[])
