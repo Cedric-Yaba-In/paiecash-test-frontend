@@ -28,6 +28,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ListPackageUserSubscriptionComponent } from './components/list-package-user-subscription/list-package-user-subscription.component';
 import { SubscribeToPackageComponent } from './components/subscribe-to-package/subscribe-to-package.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { SubscribeToPackageComponent } from './components/subscribe-to-package/s
     AddUserAccountComponent,
     AddPackageComponent,
     ListPackageUserSubscriptionComponent,
-    SubscribeToPackageComponent
+    SubscribeToPackageComponent,
+    ProductListComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
